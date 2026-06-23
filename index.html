@@ -106,8 +106,8 @@
 
   .stage{position:absolute;inset:0;z-index:5;pointer-events:none;display:flex;align-items:center;padding:0 clamp(28px,7.5vw,130px)}
   .panel{position:absolute;left:clamp(28px,7.5vw,130px);width:min(46vw,560px);opacity:0;visibility:hidden;transform:translateY(26px);transition:opacity .85s cubic-bezier(.2,.6,.2,1),transform .85s cubic-bezier(.2,.6,.2,1),visibility .85s;
-    background:linear-gradient(158deg,rgba(255,252,245,0.58) 0%,rgba(252,244,229,0.72) 52%,rgba(250,240,222,0.80) 100%);
-    -webkit-backdrop-filter:blur(24px) saturate(1.4) brightness(1.04);backdrop-filter:blur(24px) saturate(1.4) brightness(1.04);
+    background:linear-gradient(158deg,rgba(255,252,245,0.40) 0%,rgba(252,244,229,0.54) 52%,rgba(250,240,222,0.68) 100%);
+    -webkit-backdrop-filter:blur(22px) saturate(1.42) brightness(1.05);backdrop-filter:blur(22px) saturate(1.42) brightness(1.05);
     border:1px solid rgba(255,255,255,0.5);border-radius:26px;padding:36px 40px;
     box-shadow:0 1px 0 rgba(255,255,255,0.65) inset,0 44px 90px -46px rgba(35,16,28,0.5);}
   .panel.on{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
@@ -780,7 +780,7 @@
     torusMat.opacity=0.16*vis;moonMat.opacity=vis;
 
     // zodiac wheel follows the active luminary, spins in 3D
-    wheelScale=damp(wheelScale,aR*WHEEL_F,4,dt);
+    wheelScale=damp(wheelScale,aR*WHEEL_F,3.2,dt);
     wheelGroup.position.set(activeOffsetX,activeOffsetY,-3.0);
     wheelF.scale.set(wheelScale,wheelScale,1);
     wheelR.scale.set(wheelScale*1.13,wheelScale*1.13,1);
@@ -836,3 +836,4 @@
 </script>
 </body>
 </html>
+
